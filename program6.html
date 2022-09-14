@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        textarea{
+            width: 600px;
+            height: 200px;
+        }
+
+        input{
+            width:600px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    
+Write it here<br>
+    <input type="text"  id ="first"/>
+    <br>
+    <br>
+    Operation will perform here!!!<br>
+    <textarea type = "text" id ="area" > </textarea>
+    <br>
+    <button onclick="push()">PUSH</button>
+    <button onclick="pop()">POP</button>
+
+
+    <script>
+        var b = [];
+        function push()
+        {
+            var a =document.getElementById("first").value;
+            if(a!="")
+            {
+                b.push(a+"\n");
+                document.getElementById("area").value = b;
+                document.getElementById("first").value = "";
+
+            }
+
+            else
+            {
+                alert("String is empty ");
+            }
+        }
+
+        function pop()
+        {
+            if(b!="")
+            {
+                document.getElementById("area").value = b;
+            }
+            else
+            {
+                alert("String Empty!!!");
+            }
+        }
+
+    </script>
+</body>
+</html>

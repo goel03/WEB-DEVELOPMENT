@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 3</title>
+    <style>
+        button {
+            background-color: cornsilk;
+            border-radius: 8px;
+            width: 30%;
+            margin-right: 24px;
+            margin-bottom: 12px;
+            padding: 12px 18px;
+            border-style: solid;
+            border-color: brown;
+            border-width: 4px;
+
+
+        }
+
+        * {
+            font-size: large;
+            text-align: center;
+        }
+
+        button:hover {
+            background-color: lightgreen;
+        }
+
+        #b1:hover {
+            background-color: red;
+        }
+
+        #b2:hover {
+            background-color: green;
+        }
+
+        #b3:hover {
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id='p'> Changing font size </p>
+    <div>
+        <button id="b1" class="color"> Red </button>
+        <button id="b2" class="color"> Green </button>
+        <button id="b3" class="color"> Blue </button>
+    </div>
+    <div>
+        <button id="b4" class="font"> 10px </button>
+        <button id="b5" class="font"> 20px </button>
+        <button id="b6" class="font"> 30px </button>
+    </div>
+
+    <div>
+        <button id="b7" class="f1">Arial </button>
+        <button id="b8" class="f1">Fantasy</button>
+        <button id="b9" class="f1"> Cursive </button>
+    </div>
+
+    <script>
+
+        var el = document.getElementById("p");
+       // var colors = document.getElementsByClassName("color");
+        
+var colors=document.getElementsByClassName("color");
+
+        var fonts = document.getElementsByClassName("font");
+
+        var f1s = document.getElementsByClassName("f1");
+        for(var i=0;i<colors.length;i++)
+        {
+            colors[i].addEventListener("click",changecolor);
+        }
+
+
+        for (var i = 0; i < fonts.length; i++) {
+            fonts[i].addEventListener("click", changefont);
+        }
+
+        for (var i = 0; i < f1s.length; i++) {
+            f1s[i].addEventListener("click", change);
+        }
+
+
+        function changecolor() {
+            el.style.color=this.innerHTML;
+        }
+
+        function changefont() {
+            el.style.fontSize= this.innerHTML
+        }
+        
+        function change() {
+            el.style.fontFamily = this.innerHTML
+        }
+
+
+        function font() {
+            document.getElementById("p").style.fontFamily = "arial";
+        }
+        function font2() {
+            document.getElementById("p").style.fontFamily = "fantasy";
+        }
+        function font3() {
+            document.getElementById("p").style.fontFamily = "cursive";
+        }
+    </script>
+</body>
+
+</html>

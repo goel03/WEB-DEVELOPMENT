@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id ='img' src ='pp.jpg'>
+    <br>
+    <br>
+
+    <button onclick="start()" > Start</button>
+    <button onclick="stop()" > Stop</button>
+    <script>
+        var t =10;
+        var y;
+function start()
+{
+    y = setInterval(function start()
+    {
+        var a= document.getElementById('img');
+        a.style.paddingLeft = t.toString()+"px";
+        if(screen.width-80>t)
+        {
+            t=t+100;
+        }
+        else
+        {
+            t=0;
+            a.style.paddingLeft ="0px";
+        }
+    },1000);
+}
+function stop()
+{
+    clearInterval(y);
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiplication Table</title>
+</head>
+<body>
+
+<h2>MultiplicationTable</h2>
+
+<br>   
+  
+<button id ='1'>Print Table</button>
+<script>
+		var text = "";
+		var T;
+	    var i = 2;
+		var y = 2;
+		var z = 1;
+
+		document.getElementById("1").addEventListener("click" ,my);
+		function my(){
+			setInterval(function my(){
+			var randomColor = Math.floor(Math.random()*16777215).toString(16);
+				if(i<=10)
+				{
+						for (T = 1; T <= 10; T++) {
+							 text += i + "*" + T + "=" + i*T + "<br>"; 
+						}
+						y = y+2;
+						document.writeln(text.fontsize(y).fontcolor("#"+randomColor));
+						//document.write(text.fontcolor("#"+randomColor));
+						i++;	
+						text = "";
+						text +="<br>";
+				}
+			},2000);
+		}
+</script>
+
+<!-- <button onclick="my()">Print Table</button> -->
+</body>
+</html> 

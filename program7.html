@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id ="1"/>
+    <button id ="button">CHECK THE VALIDITY</button>
+    <p id ="p"></p>
+
+
+    <script>
+         document.getElementById("button").addEventListener("click",abc)
+    
+        function abc()
+        {
+            let a = document.getElementById("1").value;
+            let pattern = /^(\d){10}$/;
+            if(pattern.test(a))
+            {
+                document.getElementById("p").innerHTML="Pattern Match"
+            }
+            else
+            {
+                document.getElementById("p").innerHTML="Pattern does not match "
+            }
+        }
+    </script>
+
+ 
+</body>
+</html>

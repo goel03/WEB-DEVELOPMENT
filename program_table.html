@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        var  t =document.createElement("table");
+        var text= "";
+        var T;
+        var i=2;
+        var y=2;
+        var z=1;
+        setInterval(function my()
+        {
+
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            var row=document.createElement("tr");
+            if(i<=10)
+            {
+                for(T=1;T<=10;T++)
+                {
+                    var col =document.createElement("td");
+                    text =(i+"*" +T + "=" +i*T)
+                    col.innerHTML=text;
+
+                    row.appendChild(col);
+                    t.style.border="1px solid red";
+                }
+
+                row.style.border="1px solid blue";
+                y=y+2;
+                i++;
+                text="";
+                t.appendChild(row);
+                document.body.appendChild(t);
+                
+
+            }
+        },1000);
+    </script>
+    
+</body>
+</html>
