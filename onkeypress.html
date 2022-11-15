@@ -1,0 +1,23 @@
+<html>
+<head>
+	<script>
+		function onkey(event){
+			//alert("hi");
+			const isL = /^[a-z]$/i.test(event.key);
+            const isN = /^[0-9]$/i.test(event.key);
+			//var p = document.getElementById("2").value.toString();
+			//var o = document.getElementById("2").value;
+			//var i = /^[a-z]$/i;
+			//var f = /^[0-9]$/i;
+			//var n = o.toString();
+			if(isL)
+				alert("It is Aplha ");
+			else
+				alert("It is numeric");
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="2" onkeypress='onkey(event)'/>
+</body>
+</html>

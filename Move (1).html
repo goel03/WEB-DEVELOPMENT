@@ -1,0 +1,31 @@
+<html>
+<head>
+
+</head>
+<body>
+   <img id = "img" src="download.jpg">
+   <br> <br>
+   <button  onclick="move()"> Move </button>
+   <button onclick="stop()"> Stop </button>
+   <script>
+    var t = 10;
+	var y;
+	function move(){
+	y = setInterval(function mov1(){
+			var a = document.getElementById("img");
+			a.style.paddingLeft = t.toString()+"px";
+			if(screen.width-a.width>t){
+				t=t+100;
+			}else{
+			   t=0;
+			   a.style.paddingLeft = "0px";
+			}
+			
+		},1000);
+	}
+	function stop(){
+		clearInterval(y);
+	}
+	</script>
+</body>
+</html>

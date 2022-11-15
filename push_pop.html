@@ -1,0 +1,36 @@
+<html>
+<head>
+	<script>
+		var b = [];
+		function push1(){
+			var a = document.getElementById("1").value;
+			if(a!=""){
+				b.push(a+"\n");
+				document.getElementById("2").value = b;
+				document.getElementById("1").value = "";
+			}
+			else{
+				alert("String is Empty");
+			}
+		}
+		
+		function pop1(){
+			if(b!=""){
+				b.pop();
+				document.getElementById("2").value = b;
+			}
+			else{
+				alert("String is empty");
+			}
+		}
+	</script>
+</head>
+<body>
+	<input type="text" id="1"/> <br> <br>
+	<textarea type="text" id="2"/> </textarea> <br><br>
+	
+	<button onclick="push1()"> Push </button>
+	<button onclick="pop1()"> Pop </button>
+	
+</body>
+</html>
